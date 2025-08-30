@@ -3,6 +3,24 @@
 This project was created by Srushti as part of the 8Byte Assignment.
 It demonstrates the use of Apache Airflow with Docker to orchestrate a data pipeline.
 
+
+# Project Setup
+
+```
+8Byte-Assignment-Srushti/
+│
+├── dags/                          # Airflow DAGs (pipelines)
+│   ├── stock_dag.py                # Main DAG to schedule stock fetching & storing
+│
+├── scripts/                       # Custom scripts
+│   ├── fetch_and_store.py          # Fetches stock data from Alpha Vantage & stores in DB
+│
+├── docker-compose.yaml             # Docker setup for Airflow, Postgres, Adminer
+├── .env                     #  environment variables (API keys, Fernet, etc.)
+├── README.md
+
+```
+
 # Setup & Installation
 
 ## 1. Clone & Extract Project
@@ -17,7 +35,7 @@ Or extract the provided ZIP file into your working directory.
 
 ### Alpha Vantage API Key
 
-* Go to (Alpha Vantage)[https://www.alphavantage.co/support/#api-key]
+* Go to [Alpha Vantage](https://www.alphavantage.co/support/#api-key)
 * Sign up and obtain your API Key.
 * Update your .env with:
 
@@ -71,7 +89,7 @@ The web server starts only when:
 Listening at: http://0.0.0.0:8080
 ```
 
-Once you see this message, open (http://localhost:8080)[http://localhost:8080] in your browser.
+Once you see this message, open [http://localhost:8080](http://localhost:8080) in your browser.
 
 ## Data Fetching
 
